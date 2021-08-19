@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	"strings"
 )
 
 func main() {
@@ -36,8 +35,7 @@ func main() {
 
 func parseInput(scanner *bufio.Scanner) (col int, err error) {
 	input := scanner.Text()
-	strs := strings.Split(input, ",")
-	col, err = strconv.Atoi(strs[0])
+	col, err = strconv.Atoi(input)
 	if err != nil {
 		return 0, err
 	}
